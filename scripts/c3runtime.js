@@ -3920,7 +3920,8 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Touch.Cnds.OnTapGestureObject,
 		C3.Behaviors.Tween.Cnds.OnTweensFinished,
 		C3.Plugins.video.Acts.Play,
-		C3.Plugins.video.Cnds.HasEnded,
+		C3.Plugins.System.Cnds.Compare,
+		C3.Plugins.video.Exps.PlaybackTime,
 		C3.Plugins.Sprite.Cnds.IsBoolInstanceVarSet,
 		C3.Plugins.System.Acts.GoToLayout,
 		C3.Plugins.AJAX.Cnds.OnComplete,
@@ -3945,7 +3946,6 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.System.Acts.SubVar,
 		C3.Plugins.Sprite.Exps.UID,
 		C3.Plugins.Sprite.Acts.SetAnimFrame,
-		C3.Plugins.System.Cnds.Compare,
 		C3.Plugins.Spritefont2.Cnds.CompareInstanceVar,
 		C3.Plugins.Arr.Exps.At,
 		C3.Plugins.Sprite.Cnds.CompareInstanceVar,
@@ -4116,6 +4116,7 @@ self.C3_ExpressionFuncs = [
 		},
 		() => -1,
 		() => "out",
+		() => 25,
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
 			const f1 = p._GetNode(1).GetBoundMethod();
